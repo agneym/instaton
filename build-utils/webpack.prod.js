@@ -2,9 +2,16 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const commonPaths = require('./common-paths');
 
 module.exports = {
   devtool: 'source-map',
+  devServer: {
+    contentBase: commonPaths.outputPath,
+    port: 3000,
+    host: "0.0.0.0",
+    compress: true
+  },
   module: {
     rules: [
       {
