@@ -1,11 +1,18 @@
 {
-  "name": "webpack-test",
+  "name": "react-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack --env=prod",
-    "start": "webpack-dev-server --env=dev"
+    "start": "webpack-dev-server --env=dev",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "author": "Boy With Silver Wings",
   "license": "ISC",
@@ -18,11 +25,20 @@
     "compression-webpack-plugin": "^1.0.0",
     "css-loader": "^0.28.5",
     "detect-port": "^1.2.1",
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.2.1",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "html-loader": "^0.5.1",
     "html-webpack-plugin": "^2.30.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.3",
     "npm-install-webpack-plugin": "^4.0.5",
+    "prettier": "^1.5.3",
     "style-loader": "^0.18.2",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "url-loader": "^0.5.9",

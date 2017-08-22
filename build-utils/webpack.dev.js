@@ -1,44 +1,46 @@
-const NpmInstallPlugin = require('npm-install-webpack-plugin');
-const detect = require('detect-port');
-const commonPaths = require('./common-paths');
-
-function findOpenPort(port) {
-  detect(port)
-    .then(_port => {
-      if(port === _port) {
-        console.log(`Port ${port} is free`);
-        return port;
-      } else {
-        console.log(`port: ${port} was occupied, try port: ${_port}`);
-        return _port;
-      }
-    })
-}
+const NpmInstallPlugin = require("npm-install-webpack-plugin");
+const detect = require("detect-port");
+const webpack = require("webpack");
+const commonPaths = require("./common-paths");
 
 const config = {
-  devtool: 'eval-source-map',
+  devtool: "eval-source-map",
   devServer: {
-    port: findOpenPort(3000),
+    port: 3000,
     open: true,
-    host: '0.0.0.0',
+    host: "0.0.0.0",
     overlay: true,
     hot: true,
     useLocalIp: true,
+    historyApiFallback: true
   },
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
+        use: ["style-loader", "css-loader"]
+      },
+      {
+        test: /\.jsx?$/,
+        enforce: "pre",
+        loader: "eslint-loader",
+        options: {
+          emitWarning: true
+        }
+      },
+      {
+        test: /.jsx?$/,
+        use: {
+          loader: "babel-loader",
+          query: {
+            presets: ["es2015", "react"]
+          }
+        },
+        exclude: /node_modules/
       }
     ]
   },
-  plugins: [
-    new NpmInstallPlugin()
-  ]
-}
+  plugins: [new NpmInstallPlugin(), new webpack.HotModuleReplacementPlugin()]
+};
 
 module.exports = config;

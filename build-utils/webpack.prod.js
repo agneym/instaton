@@ -1,15 +1,16 @@
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
-const commonPaths = require('./common-paths');
+const webpack = require("webpack");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
+const commonPaths = require("./common-paths");
 
 module.exports = {
-  devtool: 'source-map',
+  devtool: "source-map",
   devServer: {
     contentBase: commonPaths.outputPath,
     port: 3000,
     host: "0.0.0.0",
+    useLocalIp: true,
     compress: true
   },
   module: {
@@ -25,26 +26,29 @@ module.exports = {
             }
           }
         })
+      },
+      {
+        test: /.jsx?$/,
+        use: {
+          loader: "babel-loader",
+          query: {
+            presets: ["es2015", "react"]
+          }
+        },
+        exclude: /(node_modules|dist)/
       }
     ]
   },
   plugins: [
     new ExtractTextPlugin("styles.css"),
     new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')
+      "process.env": {
+        NODE_ENV: JSON.stringify("production")
       }
     }),
     new UglifyJSPlugin({
-      test: /\.jsx?$/,
+      test: /\.jsx?$/
     }),
-    new webpack.optimize.AggressiveMergingPlugin(),
-    new CompressionPlugin({
-      asset: "[path].gz[query]",
-      algorithm: "gzip",
-      test: /\.(js|html|css)$/,
-      threshold: 10240,
-      minRatio: 0.8
-    })
+    new webpack.optimize.AggressiveMergingPlugin()
   ]
-}
+};
