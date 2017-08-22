@@ -20,12 +20,17 @@ module.exports = {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
-          use: {
-            loader: "css-loader",
-            options: {
-              minimize: true
+          use: [
+            {
+              loader: "css-loader",
+              options: {
+                importLoaders: 1
+              }
+            },
+            {
+              loader: "postcss-loader"
             }
-          }
+          ]
         })
       },
       {

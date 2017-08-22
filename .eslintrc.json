@@ -6,5 +6,8 @@
       "jsx": true
     }
   },
-  "extends": "airbnb"
+  "extends": [
+    "airbnb",
+    "prettier"
+  ]
 }
