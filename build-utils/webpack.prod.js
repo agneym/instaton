@@ -41,7 +41,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(["../dist"], {
+    new CleanWebpackPlugin(["dist"], {
       root: commonPaths.root
     }),
     new ExtractTextPlugin("styles.css"),
