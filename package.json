@@ -22,6 +22,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.16",
     "compression-webpack-plugin": "^1.0.0",
     "css-loader": "^0.28.5",
     "detect-port": "^1.2.1",

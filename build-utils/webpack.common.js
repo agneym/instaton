@@ -1,17 +1,14 @@
-const commonPaths = require('./common-paths');
-const webpack = require('webpack');
-const htmlWebpackPlugin = require('html-webpack-plugin');
+const commonPaths = require("./common-paths");
+const webpack = require("webpack");
+const htmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
   entry: {
-    app: './src/index.js',
-    vendor: [
-      'react',
-      'react-dom'
-    ]
+    app: "./src/index.js",
+    vendor: ["react", "react-dom"]
   },
   output: {
-    filename: "[hash].bundle.js",
+    filename: "[chunkhash].bundle.js",
     path: commonPaths.outputPath
   },
   module: {
@@ -20,7 +17,7 @@ const config = {
         test: /\.png$/,
         use: [
           {
-            loader: 'url-loader',
+            loader: "url-loader",
             options: {
               limit: 1000
             }
@@ -29,20 +26,20 @@ const config = {
       },
       {
         test: /\.html$/,
-        loader: 'html-loader'
+        loader: "html-loader"
       }
     ]
   },
   plugins: [
     new webpack.ProgressPlugin(),
     new htmlWebpackPlugin({
-      template: 'src/index.html'
+      template: "src/index.html"
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name:'vendor', 
-      filename: 'vendor.js'
+      name: "vendor",
+      filename: "vendor.js"
     })
   ]
-}
+};
 
 module.exports = config;

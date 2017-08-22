@@ -36,7 +36,7 @@ const config = {
             presets: ["es2015", "react"]
           }
         },
-        exclude: /node_modules/
+        exclude: /(node_modules|dist|build-utils)/
       }
     ]
   },

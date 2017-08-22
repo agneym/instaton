@@ -2,6 +2,7 @@ const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 const commonPaths = require("./common-paths");
 
 module.exports = {
@@ -35,11 +36,14 @@ module.exports = {
             presets: ["es2015", "react"]
           }
         },
-        exclude: /(node_modules|dist)/
+        exclude: /(node_modules|dist|build-utils|webpack.config.js)/
       }
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(["../dist"], {
+      root: commonPaths.root
+    }),
     new ExtractTextPlugin("styles.css"),
     new webpack.DefinePlugin({
       "process.env": {
