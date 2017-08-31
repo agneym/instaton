@@ -9,5 +9,14 @@
   "extends": [
     "airbnb",
     "prettier"
-  ]
+  ],
+  "rules": {
+    "no-console": 0,
+    "no-unused-vars": 1 
+  },
+  "globals": {
+    "window": true,
+    "document": true,
+    "navigator": true
+  }
 }

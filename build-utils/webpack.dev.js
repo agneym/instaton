@@ -6,7 +6,7 @@ const commonPaths = require("./common-paths");
 const config = {
   devtool: "eval-source-map",
   devServer: {
-    port: 3000,
+    port: 3002,
     open: true,
     host: "0.0.0.0",
     overlay: true,
@@ -50,7 +50,7 @@ const config = {
             presets: ["es2015", "react"]
           }
         },
-        exclude: /(node_modules|dist|build-utils)/
+        exclude: /(node_modules|dist|build-utils|webpack.config.js)/
       }
     ]
   },

@@ -11,6 +11,9 @@ const config = {
     filename: "[chunkhash].bundle.js",
     path: commonPaths.outputPath
   },
+  resolve: {
+    extensions: [".js", ".jsx"]
+  },
   module: {
     rules: [
       {

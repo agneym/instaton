@@ -1,9 +1,8 @@
 body {
   background-color: aliceblue;
 }
+
 div {
-  background-color: red;
-  width: 200px;
   &:hover {
     color: blue;
   }
