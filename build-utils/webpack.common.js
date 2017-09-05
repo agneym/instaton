@@ -17,13 +17,16 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.png$/,
+        test: /\.(jpe?g|png|gif|svg)$/i,
         use: [
           {
             loader: "url-loader",
             options: {
               limit: 1000
             }
+          },
+          {
+            loader: "image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false",
           }
         ]
       },

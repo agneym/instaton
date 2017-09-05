@@ -8,6 +8,8 @@ My configuration for a react app.
 * `yarn start` to start the application on port 3002
 * `yarn build` to build the application.
 
+You can replace these with their `npm` counterparts, if you prefer. 
+
 ## Features
 * ### [POSTCSS Plugins](http://postcss.org/)
   * [CSS Next](http://cssnext.io/)

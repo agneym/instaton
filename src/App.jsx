@@ -1,8 +1,12 @@
 import React from 'react';
+import image from './29.jpg';
 
 function App() {
   return (
-    <p>App</p>
+    <div>
+      <img src={image} alt="wallpaper" />
+      <p>App</p>
+    </div>
   );
 }
 

@@ -10,7 +10,7 @@
     "scripts": "jest"
   },
   "lint-staged": {
-    "*.js": [
+    "*.jsx?$": [
       "prettier --write",
       "git add"
     ]
@@ -42,6 +42,7 @@
     "html-loader": "^0.5.1",
     "html-webpack-plugin": "^2.30.1",
     "husky": "^0.14.3",
+    "image-webpack-loader": "^3.4.0",
     "jest": "^20.0.4",
     "lint-staged": "^4.0.3",
     "npm-install-webpack-plugin": "^4.0.5",
