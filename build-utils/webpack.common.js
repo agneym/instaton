@@ -39,7 +39,7 @@ const config = {
   plugins: [
     new webpack.ProgressPlugin(),
     new htmlWebpackPlugin({
-      template: "src/index.html"
+      template: "public/index.html"
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: "vendor",
