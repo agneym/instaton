@@ -1,13 +1,15 @@
 {
   "presets": [
-    "es2015",
-    "react"
+    "env",
+    "react",
+    "stage-3"
   ],
   "ignore": [
     "/node_modules/",
-    "/build/chunks/",
-    "/build/public/",
-    "/build/updates/",
-    "/build/server.js"
+    "/build-utils/",
+    "/dist/"
+  ],
+  "plugins": [
+    "transform-decorators-legacy"
   ]
 }

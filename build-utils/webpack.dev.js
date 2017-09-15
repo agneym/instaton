@@ -45,10 +45,7 @@ const config = {
       {
         test: /.jsx?$/,
         use: {
-          loader: "babel-loader",
-          query: {
-            presets: ["es2015", "react"]
-          }
+          loader: "babel-loader"
         },
         exclude: /(node_modules|dist|build-utils|webpack.config.js)/
       }

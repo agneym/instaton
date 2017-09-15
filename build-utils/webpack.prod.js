@@ -38,10 +38,7 @@ module.exports = {
       {
         test: /.jsx?$/,
         use: {
-          loader: "babel-loader",
-          query: {
-            presets: ["es2015", "react"]
-          }
+          loader: "babel-loader"
         },
         exclude: /(node_modules|dist|build-utils|webpack.config.js)/
       }
@@ -58,7 +55,10 @@ module.exports = {
       }
     }),
     new UglifyJSPlugin({
-      test: /\.jsx?$/
+      test: /\.jsx?$/,
+      compress: {
+        drop_console: true
+      }
     }),
     new webpack.optimize.AggressiveMergingPlugin(),
     new workboxPlugin({

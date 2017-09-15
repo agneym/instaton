@@ -41,6 +41,9 @@ You can replace these with their `npm` counterparts, if you prefer.
   Used to minify, mangle and compress javascript code. 
   Used only during production.
 
+* ### [Workbox](https://developers.google.com/web/tools/workbox)
+  Generates an optimised service worker with support for precaching, background-sync and offline loading.
+  
 ## Other enhancements
 1. Code split into `vendor.js` and hashed javascript filenames. 
 This helps in pushing new code without worrying about caching issues.
