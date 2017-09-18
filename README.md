@@ -25,6 +25,10 @@ You can replace these with their `npm` counterparts, if you prefer.
     Follows https://github.com/stylelint/stylelint-config-standard for linting. 
     Turn rules on or off from `.stylelintrc.json` file.
 
+  * [PostCSS Normalize](https://www.npmjs.com/package/postcss-normalize)
+
+    Normalize stylesheets based on browser support for browserlist.
+
 * ### [ESLint](https://eslint.org)
   Follows [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript). You can turn rules on or off from `.eslintrc.json`. You can choose to ignore files on whole from `.eslintignore`
 
@@ -42,7 +46,7 @@ You can replace these with their `npm` counterparts, if you prefer.
   Used only during production.
 
 * ### [Workbox](https://developers.google.com/web/tools/workbox)
-  Generates an optimised service worker with support for precaching, background-sync and offline loading.
+  Generates an optimised service worker with support for precaching and offline loading.
   
 ## Other enhancements
 1. Code split into `vendor.js` and hashed javascript filenames. 
@@ -51,14 +55,14 @@ This helps in pushing new code without worrying about caching issues.
 Just import the required library and let wepack worry about installing it. 
 
     https://github.com/webpack-contrib/npm-install-webpack-plugin
-3. Extracts CSS to a new file. 
+3. Extracts CSS to a new file and minifies it.
     
     https://github.com/webpack-contrib/extract-text-webpack-plugin
 
 4. Minifies react and react-dom packages.
 
     http://moduscreate.com/optimizing-react-es6-webpack-production-build/
-
+5. Removes debugging consoles for Production build
 
 
 

@@ -27,6 +27,7 @@
     "babel-preset-stage-3": "^6.24.1",
     "clean-webpack-plugin": "^0.1.16",
     "compression-webpack-plugin": "^1.0.0",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.5",
     "detect-port": "^1.2.1",
     "enzyme": "^2.9.1",

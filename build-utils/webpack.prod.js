@@ -6,6 +6,7 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 const workboxPlugin = require('workbox-webpack-plugin');
 const path = require("path");
 const commonPaths = require("./common-paths");
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   devtool: "source-map",
@@ -57,6 +58,7 @@ module.exports = {
     }),
     new UglifyJSPlugin({
       test: /\.jsx?$/,
+      warnings: false,
       compress: {
         drop_console: true
       }
@@ -66,6 +68,15 @@ module.exports = {
       globDirectory: commonPaths.outputPath,
       globPatterns: ['**/*.{html,js,css}'],
       swDest: path.join(commonPaths.outputPath, 'sw.js'),
-    })
+    }),
+    new CopyWebpackPlugin([
+      { 
+        from: commonPaths.public,
+        to: commonPaths.outputPath,
+        ignore: [
+          'index.html'
+        ]
+      }
+    ])
   ]
 };
