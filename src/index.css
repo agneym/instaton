@@ -41,3 +41,14 @@
 .right-header .icon {
   margin: 0 20px;
 }
+
+.right-header a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  
+  &:active, 
+  &:hover {
+    color: black;
+  }
+}

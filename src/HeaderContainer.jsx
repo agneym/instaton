@@ -13,9 +13,15 @@ function HeaderContainer() {
           <Search size="mini" />
         </div>
         <div className="right-header">
-          <i className="icon ion-android-compass" />
-          <i className="icon ion-ios-heart" />
-          <i className="icon ion-android-person" />
+          <a>
+            <i className="icon ion-android-compass" />
+          </a>
+          <a>
+            <i className="icon ion-ios-heart" />
+          </a>
+          <a>
+            <i className="icon ion-android-person" />
+          </a>
         </div>
       </Header>
     </Container>
