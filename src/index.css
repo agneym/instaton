@@ -46,8 +46,8 @@
   cursor: pointer;
   text-decoration: none;
   color: black;
-  
-  &:active, 
+
+  &:active,
   &:hover {
     color: black;
   }
