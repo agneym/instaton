@@ -1,1 +1,43 @@
 @import-normalize; /* stylelint-disable-line */
+
+.small-font {
+  font-size: 0.7em !important;
+}
+
+.action-container {
+  font-size: 2em;
+}
+
+.content {
+  padding-top: 0 !important;
+}
+
+.single-card:first-child {
+  margin-top: 35px !important;
+}
+
+.single-card {
+  padding: 5px 0 !important;
+}
+
+.header-container {
+  padding-top: 8px !important;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-container .header {
+  display: inline !important;
+}
+
+.ui.input input {
+  padding: 0;
+}
+
+.ui.search .prompt {
+  border-radius: 0;
+}
+
+.right-header .icon {
+  margin: 0 20px;
+}
