@@ -17,7 +17,15 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(woff|woff2|eot|ttf|svg)$/,
+        use: [
+          {
+            loader: "url-loader"
+          }
+        ]
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/,
         use: [
           {
             loader: "url-loader",

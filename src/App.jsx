@@ -1,15 +1,20 @@
 /* eslint-disable */
 import React, {Component} from 'react';
+import { Container } from 'semantic-ui-react';
 import 'whatwg-fetch';
-import HeaderContainer from './HeaderContainer.jsx';
-
+import HeaderContainer from './HeaderContainer';
+import Content from './Content';
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+  }
   render() {
     return (
-      <div>
-
-        <p>App</p>
-      </div>
+      <main>
+        <HeaderContainer />
+        <Content />
+      </main>
     );
   }
 

@@ -5,15 +5,15 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 
-if (module.hot) {
-  module.hot.accept();
+// if (module.hot) {
+//   module.hot.accept();
 
-  window.addEventListener("message", e => {
-    if (process.env.NODE_ENV !== "production") {
-      console.clear();
-    }
-  });
-}
+//   window.addEventListener("message", e => {
+//     if (process.env.NODE_ENV !== "production") {
+//       console.clear();
+//     }
+//   });
+// }
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
