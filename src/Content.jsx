@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Card, Image } from 'semantic-ui-react';
+import Actions from './Content/Actions';
 
 function Content() {
   return (
@@ -14,10 +15,7 @@ function Content() {
           </Card.Content>
           <Image src="https://source.unsplash.com/random/400x400" />
           <Card.Content>
-            <div className="action-container">
-              <span><i className="icon ion-ios-heart-outline" /></span>
-              <span><i className="icon ion-ios-chatbubble-outline" /></span>
-            </div>
+            <Actions />
             <p>
               <strong>matthew</strong>
               <span> living life.</span>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Header, Container, Search } from 'semantic-ui-react';
+import Links from './Header/Links';
 
 function HeaderContainer() {
   return (
@@ -12,17 +13,7 @@ function HeaderContainer() {
         <div className="center-header">
           <Search size="mini" />
         </div>
-        <div className="right-header">
-          <a>
-            <i className="icon ion-android-compass" />
-          </a>
-          <a>
-            <i className="icon ion-ios-heart" />
-          </a>
-          <a>
-            <i className="icon ion-android-person" />
-          </a>
-        </div>
+        <Links />
       </Header>
     </Container>
   );
