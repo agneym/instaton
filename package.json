@@ -10,7 +10,7 @@
     "scripts": "jest"
   },
   "lint-staged": {
-    "*.jsx?$": [
+    "*.jsx": [
       "prettier --write",
       "git add"
     ]
