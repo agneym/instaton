@@ -53,10 +53,16 @@
   }
 }
 
-.icon {
-  width: 0.8em;
+.button {
+  outline: none;
 }
 
-.heart {
-  fill: white;
+.comment .text {
+  display: inline;
+}
+
+.card-footer input {
+  outline: none !important;
+  border: none !important;
+  border-top: 1px solid #eee !important;
 }
