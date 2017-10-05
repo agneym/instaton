@@ -66,3 +66,23 @@
   border: none !important;
   border-top: 1px solid #eee !important;
 }
+
+/************************************************************************
+                              Profile
+************************************************************************/
+
+/* Header */
+.profile-header {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.profile-header .avatar {
+  height: 100px;
+  width: 100px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  object-fit: cover;
+}

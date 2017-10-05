@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 function LinkContainer() {
   return (
@@ -9,12 +10,11 @@ function LinkContainer() {
       <a>
         <i className="icon ion-ios-heart" />
       </a>
-      <a>
+      <Link to="/profile">
         <i className="icon ion-android-person" />
-      </a>
+      </Link>
     </div>
   );
 }
 
 export default LinkContainer;
-
