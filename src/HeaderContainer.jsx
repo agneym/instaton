@@ -1,14 +1,19 @@
-import React from 'react';
-import { Header, Container, Search } from 'semantic-ui-react';
-import LinkContainer from './Header/LinkContainer';
+import React from "react";
+import { Header, Container, Search } from "semantic-ui-react";
+import { Link } from "react-router-dom";
+import LinkContainer from "./Header/LinkContainer";
 
 function HeaderContainer() {
   return (
     <Container fluid as="header">
-      <Header as='div' size='huge' dividing className="header-container">
+      <Header as="div" size="huge" dividing className="header-container">
         <div className="left-header">
-          <i className="icon ion-social-instagram" />
-          <Header textAlign='center' as='h1'>INSTATON</Header>
+          <Link to="/">
+            <i className="icon ion-social-instagram" />
+            <Header textAlign="center" as="h1">
+              INSTATON
+            </Header>
+          </Link>
         </div>
         <div className="center-header">
           <Search size="mini" />
@@ -20,4 +25,3 @@ function HeaderContainer() {
 }
 
 export default HeaderContainer;
-

@@ -21,7 +21,7 @@
 }
 
 .header-container {
-  padding-top: 8px !important;
+  padding: 15px 0 !important;
   display: flex;
   justify-content: space-around;
 }
@@ -74,9 +74,6 @@
 /* Header */
 .profile-header {
   height: 40vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
 }
 
 .profile-header .avatar {
@@ -85,4 +82,23 @@
   border: 1px solid #000;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.right-header {
+  margin: 0;
+
+  & .top-stat {
+    justify-content: space-around;
+  }
+
+  & p {
+    margin: 0 10px;
+  }
+}
+
+/************************************************************************
+                              Utils
+************************************************************************/
+.strong-text {
+  font-weight: bold;
 }
