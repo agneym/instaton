@@ -8,7 +8,7 @@ function HeaderContainer() {
     <Container fluid as="header">
       <Header as="div" size="huge" dividing className="header-container">
         <div className="left-header">
-          <Link to="/">
+          <Link to="/" className="top-icon">
             <i className="icon ion-social-instagram" />
             <Header textAlign="center" as="h1">
               INSTATON
